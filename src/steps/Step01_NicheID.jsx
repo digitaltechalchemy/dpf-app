@@ -10,7 +10,6 @@ export default function Step01_NicheID({ appState, onStateChange }) {
     sellerIdentity: inputs.sellerIdentity || '',
     customerHypothesis: inputs.customerHypothesis || '',
     nicheKeywords: inputs.nicheKeywords || '',
-    productType: inputs.productType || '',
   })
 
   function updateField(field, value) {
@@ -35,7 +34,7 @@ export default function Step01_NicheID({ appState, onStateChange }) {
   }
 
   const allFilled = form.sellerIdentity.trim() && form.customerHypothesis.trim() &&
-                    form.nicheKeywords.trim() && form.productType.trim()
+                    form.nicheKeywords.trim()
   const isComplete = stepState.status === 'complete'
 
   function handleComplete() {
@@ -46,7 +45,7 @@ export default function Step01_NicheID({ appState, onStateChange }) {
   return (
     <div className="p-5 space-y-5">
       <p className="text-sm text-dta-dark/70">
-        Define your niche, target customer, and product idea. All fields are required before advancing.
+        Define your niche and target customer. All fields are required before advancing. Product ideas will emerge from the PMT Research in Step 3.
       </p>
 
       <Field
@@ -74,16 +73,6 @@ export default function Step01_NicheID({ appState, onStateChange }) {
         placeholder="e.g., retirement planning, personal organization, life transition, digital planner"
         multiline={false}
       />
-      <Field
-        label="Product Type Hypothesis"
-        hint="Initial product format idea"
-        value={form.productType}
-        onChange={(v) => updateField('productType', v)}
-        disabled={isComplete}
-        placeholder="e.g., Digital planner bundle with spreadsheet tracker + PDF guide"
-        multiline={false}
-      />
-
       {!isComplete ? (
         <button
           onClick={handleComplete}

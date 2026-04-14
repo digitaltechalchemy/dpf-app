@@ -16,9 +16,6 @@ CUSTOMER HYPOTHESIS:
 NICHE KEYWORDS:
 {{step1.nicheKeywords}}
 
-PRODUCT TYPE HYPOTHESIS:
-{{step1.productType}}
-
 Deliver a structured three-section report:
 
 SECTION 1 — LANGUAGE MINING
@@ -49,8 +46,6 @@ ORIGINAL NICHE CONTEXT:
 - Seller: {{step1.sellerIdentity}}
 - Customer: {{step1.customerHypothesis}}
 - Niche: {{step1.nicheKeywords}}
-- Product Type: {{step1.productType}}
-
 Create a detailed Product Brief with these 10 sections:
 
 1. PRODUCT NAME — A compelling, SEO-friendly product name
