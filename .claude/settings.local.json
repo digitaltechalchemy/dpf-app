@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//g/_Digital Tech Alchemy/_DTA Factory/**)",
+      "Bash(pandoc \"DPF_v2_Build_Spec.docx\" -t markdown --wrap=none)",
+      "Bash(python \"C:/Users/joewi/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/03e00d88-0361-4a95-a528-72360a4873b5/176fdefe-142c-46a2-b829-883a269fa139/skills/docx/scripts/office/unpack.py\" \"G:/_Digital Tech Alchemy/_DTA Factory/DPF_v2_Build_Spec.docx\" \"G:/_Digital Tech Alchemy/_DTA Factory/dpf-app/_unpacked_spec\")",
+      "Bash(python -c ':*)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(rm -f src/App.css)",
+      "Bash(rm -rf _unpacked_spec)",
+      "Bash(npx vite:*)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}
