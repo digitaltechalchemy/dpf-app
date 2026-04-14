@@ -34,7 +34,13 @@ export function loadState() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return initState()
-    return JSON.parse(raw)
+    const parsed = JSON.parse(raw)
+    // Merge defaults to handle state from older app versions
+    return {
+      ...DEFAULT_STATE,
+      ...parsed,
+      runMeta: { ...DEFAULT_STATE.runMeta, ...parsed.runMeta },
+    }
   } catch {
     return initState()
   }

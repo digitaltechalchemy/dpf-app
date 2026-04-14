@@ -49,7 +49,7 @@ export default function Step02_Prerequisites({ appState, onStateChange }) {
     setFolderCreating(false)
   }
 
-  const canComplete = runMeta.aiProvider && (runMeta.canvaConnected ? runMeta.brandKitName.trim() : true)
+  const canComplete = runMeta.aiProvider && (runMeta.canvaConnected ? (runMeta.brandKitName || '').trim() : true)
 
   return (
     <div className="p-5 space-y-6">
